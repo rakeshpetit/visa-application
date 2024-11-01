@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Application {
+  id              String    @id @default(uuid())
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  status          String    @default("DRAFT") // DRAFT, SUBMITTED
+  currentStep     Int       @default(1)
+  
+  // Step 1
+  passportNumber  String?
+  dateOfBirth     DateTime?
+  nationality     String?
+  
+  // Step 2
+  purposeOfVisit  String?
+  arrivalDate     DateTime?
+  departureDate   DateTime?
+  
+  // Step 3
+  firstName       String?
+  lastName        String?
+  email           String?
+  countryOfBirth  String?
+  gender          String?
+}
