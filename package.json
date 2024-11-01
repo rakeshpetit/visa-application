@@ -9,8 +9,8 @@
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
-    "e2e": "playwright test --config playwright.config.ts",
-    "test": "vitest test --config vitest.config.ts"
+    "test-e2e": "playwright test --config playwright.config.ts",
+    "test-db": "vitest test --config vitest.database.config.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.21.1",
