@@ -82,7 +82,7 @@ export default function Step1() {
         </div>
 
         <div>
-          <label htmlFor="nationalityr" className="block mb-1">
+          <label htmlFor="nationality" className="block mb-1">
             Nationality:
           </label>
           <input
